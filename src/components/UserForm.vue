@@ -41,6 +41,7 @@ export default {
     /*fullname() {
       return `${this.email} ${this.password}`;
     },*/
+    
     /*isFormCompleted() {
       const {
         isValidString, hasOnlyLetter, name, lastName,
@@ -76,7 +77,8 @@ export default {
 
     },
     isFilled(){
-
+        const {isValidString, email, age, system} = this;
+        return (isValidString(email) && isValidString(age) && isValidString(system));
     }
   },
   methods: {
