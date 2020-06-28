@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Form from '../components/Form.vue';
 import Login from '../components/Login.vue';
 import UserForm from '../components/UserForm.vue';
 
@@ -12,11 +11,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-  },
-  {
-    path: '/form',
-    name: 'Form',
-    component: Form,
   },
   {
     path: '/login',

@@ -43,7 +43,7 @@ describe('Login', () => {
     const wrapper = shallowMount(Login, {
       computed: { isEmailFilled: () => false },
     });
-    it('should have Email message', () => {
+    it('should does have Email message', () => {
       expect(wrapper.find('.login_h1_email').attributes('style')).toBe('display: none;');
     });
   });
@@ -67,6 +67,12 @@ describe('isLoginHasAccess', () => {
         it('should be true', () => {
           const wrapper = shallowMount(Login);
           expect(wrapper.vm.hasAccess('email_1@gmail.com','password1')).toBe(true);
+        });
+      });
+      describe('And email and password does has access', () => {
+        it('should be true', () => {
+          const wrapper = shallowMount(Login);
+          expect(wrapper.vm.hasAccess('email_101@gmail.com','password101')).toBe(false);
         });
       });
     });
