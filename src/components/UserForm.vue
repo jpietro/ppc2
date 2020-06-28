@@ -13,7 +13,7 @@
   </div>
     <h4 v-show="isAgeOk" class="user_h1_idade" >A idade tem que estar entre 18 e 99, e deve ser apenas numérica</h4>
   <label for="system">SO</label>
-    <select v-model="system">
+    <select v-model="system" name="user_select_system">
       <option value="" disabled selected hidden>Choose your SO</option>
       <option value="Windows">Windows</option>
       <option value="Linux">Linux</option>
