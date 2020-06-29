@@ -15,6 +15,7 @@
     <h1 v-show="isPasswordFilled" class="login_h1_password" >
       A senha deve ter mais que 6 caracteres</h1>
   <button @click="doLogin" class="login_button_login" >Login</button>
+  <h1 id="erroLogin" style="visibility:hidden">O usuário não possui acesso</h1>
 
 </div>
 </template>
@@ -59,7 +60,7 @@ export default {
       if (hasAccess(email, password)) {
         this.$router.push({ name: 'UserForm' });
       } else {
-        console.log('Deu errado');
+        document.getElementById('erroLogin').style.visibility = 'visible';
       }
     },
     hasAccess(emailValid, passwordValid) {

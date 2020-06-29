@@ -2,13 +2,12 @@ describe('Login', () => {
   describe('When visit login url', () => {
     const validEmail = 'email_1@gmail.com';
     const invalidEmail = 'email@';
-    const emailHasNoAccess = 'email_200@gmail.com';
-    const notTheSameEmail = 'email_20@gmail.com';
+    // const emailHasNoAccess = 'email_200@gmail.com';
+    // const notTheSameEmail = 'email_20@gmail.com';
     const validPassword = 'password1';
-    const passwordHasNoAccess = 'password200';
+    // const passwordHasNoAccess = 'password200';
     const invalidPassword = '1234';
-    const notTheSamePassword = 'password15';
-
+    // const notTheSamePassword = 'password15';
 
     beforeEach(() => {
       cy.visit('/login');
