@@ -84,6 +84,5 @@ describe('User Form', () => {
         cy.get('.user_h1_idade').should('not.be.visible');
       });
     });
-
   });
 });
