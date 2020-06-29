@@ -2,10 +2,10 @@ describe('Login', () => {
   describe('When visit login url', () => {
     const validEmail = 'email_1@gmail.com';
     const invalidEmail = 'email@';
-    // const emailHasNoAccess = 'email_200@gmail.com';
+    const emailHasNoAccess = 'email_200@gmail.com';
     // const notTheSameEmail = 'email_20@gmail.com';
     const validPassword = 'password1';
-    // const passwordHasNoAccess = 'password200';
+    const passwordHasNoAccess = 'password200';
     const invalidPassword = '1234';
     // const notTheSamePassword = 'password15';
 
@@ -54,6 +54,17 @@ describe('Login', () => {
     });
 
     describe('When fill email and password', () => {
+      describe('When the user has no access', () => {
+        beforeEach(() => {
+          cy.get('.login_input_email').type(emailHasNoAccess);
+          cy.get('.login_input_password').type(passwordHasNoAccess);
+          cy.get('button').click();
+        });
+        it('contains a message wrong login', () => {
+          cy.get('.login_h1_wrong_login').should('be.visible');
+        });
+      });
+
       beforeEach(() => {
         cy.get('.login_input_email').type(validEmail);
         cy.get('.login_input_password').type(validPassword);
