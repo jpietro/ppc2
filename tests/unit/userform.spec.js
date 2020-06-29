@@ -17,7 +17,7 @@ describe('UserForm', () => {
       computed: { isEmailFilled: () => true },
     });
     it('should have Email format invalid message', () => {
-        expect(wrapper.find('.user_h1_email').attributes('style')).not.toBe('display: none;');
+      expect(wrapper.find('.user_h1_email').attributes('style')).not.toBe('display: none;');
     });
   });
 
@@ -83,5 +83,4 @@ describe('UserForm', () => {
       expect(wrapper.find('.user_h1_filled').attributes('style')).not.toBe('display: none;');
     });
   });
-
 });

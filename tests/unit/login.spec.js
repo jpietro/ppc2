@@ -17,7 +17,7 @@ describe('Login', () => {
       computed: { isPasswordFilled: () => true },
     });
     it('should have Password message', () => {
-        expect(wrapper.find('.login_h1_password').attributes('style')).not.toBe('display: none;');
+      expect(wrapper.find('.login_h1_password').attributes('style')).not.toBe('display: none;');
     });
   });
 
@@ -35,7 +35,7 @@ describe('Login', () => {
       computed: { isEmailFilled: () => true },
     });
     it('should have Email message', () => {
-        expect(wrapper.find('.login_h1_email').attributes('style')).not.toBe('display: none;');
+      expect(wrapper.find('.login_h1_email').attributes('style')).not.toBe('display: none;');
     });
   });
 
@@ -59,24 +59,22 @@ describe('Login', () => {
         });
       });
     });
-});
+  });
 
-describe('isLoginHasAccess', () => {
+  describe('isLoginHasAccess', () => {
     describe('When has email and password', () => {
       describe('And email and password has access', () => {
         it('should be true', () => {
           const wrapper = shallowMount(Login);
-          expect(wrapper.vm.hasAccess('email_1@gmail.com','password1')).toBe(true);
+          expect(wrapper.vm.hasAccess('email_1@gmail.com', 'password1')).toBe(true);
         });
       });
       describe('And email and password does has access', () => {
         it('should be true', () => {
           const wrapper = shallowMount(Login);
-          expect(wrapper.vm.hasAccess('email_101@gmail.com','password101')).toBe(false);
+          expect(wrapper.vm.hasAccess('email_101@gmail.com', 'password101')).toBe(false);
         });
       });
     });
-});
-
- 
+  });
 });

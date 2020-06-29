@@ -9,8 +9,8 @@ describe('HelloWorld.vue', () => {
     });
     expect(wrapper.text()).toMatch(msg);
   });
-  /*it('renders Hello UNIFAP when not receive a message ', () => {
+  /* it('renders Hello UNIFAP when not receive a message ', () => {
     const wrapper = shallowMount(HelloWorld);
     expect(wrapper.text()).toMatch('Hello UNIFAP');
-  });*/
+  }); */
 });
