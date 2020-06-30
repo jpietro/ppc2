@@ -1,0 +1,23 @@
+image: node:12-alpine
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - test
+
+jest:
+  stage: test
+  before_script:
+    - yarn
+  script:
+    - yarn test:unit
+
+cypress:
+  image: edimossilva/node-angular-cypress
+  stage: test
+  before_script:
+    - yarn
+  script:
+    - yarn test:e2e-ci
